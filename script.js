@@ -59,7 +59,7 @@ fetch("images.json")
   .then(images => {
     images.forEach(img => {
       const el = document.createElement("img");
-      el.src = "images/" + img;
+      el.src = img;
       el.alt = img;
       el.onclick = (e) => {
         e.stopPropagation();

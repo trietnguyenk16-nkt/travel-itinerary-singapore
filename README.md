@@ -1,43 +1,49 @@
-# Singapore Trip - Image Management
+# Singapore Trip - Quản lý hình ảnh
 
-## How to Add Images
+## Cách thêm ảnh
 
-To add new images to the gallery, follow these two simple steps:
+Để thêm ảnh mới vào bộ sưu tập, làm theo hai bước đơn giản sau:
 
-### Step 1: Add Image to Folder
-Place your image file in the `images/` folder. The folder accepts common image formats:
-- `.jpg` / `.jpeg`
-- `.png`
-- `.gif`
-- `.webp`
+### Bước 1: Tải ảnh lên Cloudinary
+Trước tiên, tải ảnh của bạn lên Cloudinary bằng Media Library:
+https://console.cloudinary.com/app/c-8ffdddcd7bade69bb9f1bee3865d6d/assets/media_library/search?q=&view_mode=mosaic
 
-**Example:** `images/marina-bay.jpg`
+### Bước 2: Ghi URL ảnh vào `images.json`
+Mở tệp `images.json` và thêm đường dẫn URL đầy đủ của ảnh từ Cloudinary vào mảng JSON.
 
-### Step 2: Register Image in images.json
-Open the `images.json` file and add the image filename to the JSON array.
-
-**Before:**
+**Trước:**
 ```json
 [
-  "img1.jpg",
-  "img2.jpg",
-  "img3.jpg"
+  "https://res.cloudinary.com/dlxcvzcr9/image/upload/q_auto/f_auto/v1777570565/img11_fhmegt.jpg"
 ]
 ```
 
-**After adding `marina-bay.jpg`:**
+**Sau khi thêm URL ảnh mới:**
 ```json
 [
-  "img1.jpg",
-  "img2.jpg",
-  "img3.jpg",
-  "marina-bay.jpg"
+  "https://res.cloudinary.com/dlxcvzcr9/image/upload/q_auto/f_auto/v1777570565/img11_fhmegt.jpg",
+  "https://res.cloudinary.com/dlxcvzcr9/image/upload/q_auto/f_auto/v177757XXXX/new-image.jpg"
 ]
 ```
 
-> **Important:** Make sure the filename in `images.json` exactly matches the filename in the `images/` folder (including the extension).
+> **Lưu ý:** Sao chép đầy đủ URL Cloudinary và dán vào `images.json`.
 
-## Project Structure
+## Cấu trúc dự án
+```
+travel-itinerary-singapore/
+├── images/                 # Lưu trữ các tệp ảnh cục bộ (nếu có)
+├── images.json            # Danh sách URL ảnh Cloudinary
+├── index.html             # Tệp HTML chính
+├── script.js              # Logic JavaScript
+├── style.css              # Styling
+└── README.md              # Tệp hướng dẫn này
+```
+
+## Tham khảo nhanh
+1. ✅ Tải ảnh lên Cloudinary
+2. ✅ Sao chép URL ảnh đầy đủ
+3. ✅ Thêm URL vào `images.json`
+4. ✅ Hoàn thành!
 ```
 sing2026/
 ├── images/                 # Store all image files here
