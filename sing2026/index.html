@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Singapore Trip</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="header">
+  <div class="header-content">
+    <h1>🇸🇬 Singapore Trip 2026</h1>
+    <p>Adventure begins ✈️</p>
+    <div class="trip-info">
+      <span class="info-badge">📍 5 Days</span>
+      <span class="info-badge">🗓️ Apr 23-26, 2026</span>
+    </div>
+  </div>
+</div>
+
+<div class="tabs">
+  <button class="tab active" onclick="showTab('timeline', this)">📅 Lịch trình</button>
+  <button class="tab" onclick="showTab('stats', this)">📊 Thống kê</button>
+  <button class="tab" onclick="showTab('tips', this)">💡 Tips</button>
+  <button class="tab" onclick="showTab('gallery', this)">📸 Hình ảnh</button>
+</div>
+
+<!-- STATS -->
+<div id="stats" class="content">
+  <div class="stats-container">
+    <div class="stat-card">
+      <div class="stat-number" id="total-activities">0</div>
+      <div class="stat-label">Hoạt động tổng cộng</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number" id="completed-count">0</div>
+      <div class="stat-label">Hoạt động đã hoàn thành</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number" id="meals-count">0</div>
+      <div class="stat-label">Lần ăn uống</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number" id="travel-count">0</div>
+      <div class="stat-label">Lần di chuyển</div>
+    </div>
+  </div>
+</div>
+
+<!-- TIPS -->
+<div id="tips" class="content">
+  <div class="tips-container">
+    <div class="tips-header">
+      <h2>🇸🇬 Review du lịch Singapore tự túc 4N3D</h2>
+      <p>Đi lần đầu vẫn "mượt" bất ngờ!</p>
+    </div>
+
+    <div class="tips-intro">
+      <p>Chia sẻ lại lịch trình cho ai chuẩn bị đi (ưu tiên nhẹ nhàng, dễ đi, không chạy deadline 😆)</p>
+      <p style="margin-top: 10px;"><a href="https://www.facebook.com/groups/nhomdulichsingaporetutuc/?multi_permalinks=1638271310788057&notif_id=1777523135861251&notif_t=feedback_reaction_generic&ref=notif" target="_blank" class="tips-link">👉 Xem review gốc trên Facebook</a></p>
+    </div>
+
+    <div class="tips-section">
+      <h3>📍 Chuẩn bị trước chuyến đi</h3>
+      <ul class="tips-list">
+        <li><strong>Vé máy bay:</strong> VietJet Air – bay quốc tế ổn, giá ok</li>
+        <li><strong>Khách sạn:</strong> Hotel 81 Rochor, đi ~2 phút tới MRT Rochor, phòng nhỏ nhưng sạch, giá hợp lý</li>
+        <li><strong>SIM / eSIM:</strong> Nhờ KetnoiSingapore mua giúp, nhận ở Cheers T4 (nhớ mang que chọc sim 😅)</li>
+        <li><strong>Thẻ tàu Ezlink:</strong> Top-up ~10 SGD/lần, dư tiền dùng ở 7-Eleven</li>
+        <li><strong>App nên có:</strong> SG MRT, Google Maps</li>
+      </ul>
+    </div>
+
+    <div class="tips-section">
+      <h3>📅 Lịch trình tham khảo</h3>
+      
+      <div class="tips-day">
+        <h4>Day 1: Arrival + City nhẹ nhàng</h4>
+        <ul class="tips-list">
+          <li>Đáp Changi Airport – làm thủ tục nhanh gọn</li>
+          <li>Ghé Jewel Changi Airport check-in thác nước 💦</li>
+          <li>Về khách sạn nghỉ ngơi</li>
+          <li>Tối dạo Marina Bay Sands + Merlion Park</li>
+        </ul>
+        <p class="tips-note">💡 Ngày đầu nên đi nhẹ để hồi sức</p>
+      </div>
+
+      <div class="tips-day">
+        <h4>Day 2: Sentosa quẩy hết mình</h4>
+        <ul class="tips-list">
+          <li>Di chuyển qua Sentosa Island</li>
+          <li>Chơi Universal Studios Singapore 🎢</li>
+          <li>Đi S.E.A. Aquarium 🐠</li>
+          <li>Trải nghiệm Scentopia Singapore + biển</li>
+          <li>Tối xem Wings of Time 🌊</li>
+        </ul>
+        <p class="tips-note">☀️ Mang kem chống nắng + nước + dù</p>
+      </div>
+
+      <div class="tips-day">
+        <h4>Day 3: Nature + chill</h4>
+        <ul class="tips-list">
+          <li>Sáng đi Gardens by the Bay 🌿 - Tham quan Cloud Forest & Flower Dome</li>
+          <li>Trưa ăn uống / cafe</li>
+          <li>Chiều shopping Orchard Road 🛍️ + ghé Chinatown</li>
+          <li>Tối ăn uống Lau Pa Sat</li>
+        </ul>
+        <p class="tips-note">💭 Ngày này chill, đi bộ nhiều nhưng không quá mệt</p>
+      </div>
+
+      <div class="tips-day">
+        <h4>Day 4: Mua sắm + về</h4>
+        <ul class="tips-list">
+          <li>Đi Bugis Street mua quà 🎁</li>
+          <li>Ăn nhẹ, cafe</li>
+          <li>Ra sân bay sớm (check-in)</li>
+          <li>Trải nghiệm SkyTrain giữa T2–T3, đi ngang thác nước siêu đẹp</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tips-section">
+      <h3>🍜 Ăn gì ngon</h3>
+      <ul class="tips-list">
+        <li>Cơm gà Hải Nam</li>
+        <li>Laksa</li>
+        <li>Ya Kun Toast + trứng lòng đào + cà phê</li>
+        <li>Cháo ếch</li>
+        <li>Thunder Tea Rice (kiểu cơm trộn healthy)</li>
+        <li>Ăn tối ở Lau Pa Sat + bia (~14 SGD/ly)</li>
+        <li>Trà sữa Amacha Chinatown</li>
+      </ul>
+    </div>
+
+    <div class="tips-section">
+      <h3>💡 Tips nhỏ</h3>
+      <ul class="tips-list">
+        <li>MRT rất dễ đi, Google Maps chỉ cực chuẩn</li>
+        <li>Mang giày êm (đi bộ nhiều)</li>
+        <li>Nước uống được tại vòi → mang chai refill</li>
+        <li><strong>Không ăn uống trên MRT</strong> (phạt nặng 😅)</li>
+        <li>Mang quạt mini cho đỡ nóng</li>
+        <li>Không cần mang nhiều tiền mặt nếu có thẻ Visa</li>
+        <li>Mang ống hút (một số quán không có)</li>
+        <li>Mua quà ở Chinatown rẻ + đẹp</li>
+        <li>Ăn xong nhớ tự trả khay ở foodcourt</li>
+      </ul>
+    </div>
+
+    <div class="tips-section">
+      <h3>🛂 Nhập/Xuất cảnh</h3>
+      <ul class="tips-list">
+        <li><strong>Nhập cảnh:</strong> Rất dễ, người ta làm đủ mọi cách để các bạn nhập cảnh luôn</li>
+        <li><strong>Xuất cảnh:</strong> Kiểm tra kỹ mấy lọ nước, thuốc xịt thơm. Nếu quá 100ml nhớ bỏ vào ký gửi trước</li>
+      </ul>
+    </div>
+
+    <div class="tips-section tips-conclusion">
+      <h3>✨ Tổng kết</h3>
+      <p>Lần đầu đi Singapore nhưng thấy cực kỳ dễ đi, sạch sẽ, mọi thứ rõ ràng. 4N3D là quá đẹp để trải nghiệm các điểm chính. Đi xong chỉ muốn quay lại tiếp 😆</p>
+    </div>
+  </div>
+</div>
+
+<!-- TIMELINE -->
+<div id="timeline" class="content active">
+
+  <div class="day" data-day="1">
+    <div class="day-header" onclick="toggleDay(this)">
+      <h2>🛫 Thứ 5 (23/04/2025)</h2>
+      <span class="day-toggle">▼</span>
+    </div>
+    <div class="day-items">
+      <div class="item" onclick="toggleItem(this)"><span>03h</span> Dậy</div>
+      <div class="item" onclick="toggleItem(this)"><span>03h45 - 4h15</span> Di chuyển ra san bay</div>
+      <div class="item" onclick="toggleItem(this)"><span>4h15 - 7h10</span> Ăn sáng bánh nhẹ tại sân bay</div>
+      <div class="item" onclick="toggleItem(this)"><span>07h10 - 10h15 (11h15 giờ Sing)</span> Bay</div>
+      <div class="item" onclick="toggleItem(this)"><span>11h15 - 12h15</span> Nhập cảnh + Lâý hành lý + thẻ sim + thẻ elink + kiểm tra thẻ sim ...</div>
+      <div class="item" onclick="toggleItem(this)"><span>12h00 - 12h30</span> Tham quan sân bay, chụp hình thác nước</div>
+      <div class="item" onclick="toggleItem(this)"><span>12h45 - 13h30</span> Ăn hotdog & uống Starbucks</div>
+      <div class="item" onclick="toggleItem(this)"><span>13h30 - 15h30</span> Di chuyển tới khách sạn và nhận phòng</div>
+      <div class="item" onclick="toggleItem(this)"><span>15h30 - 16h30</span> Thay đồ tắm rửa nghỉ ngơi</div>
+      <div class="item" onclick="toggleItem(this)"><span>16h30 - 17h30</span> Di chuyển tới Marina bay sand</div>
+      <div class="item" onclick="toggleItem(this)"><span>17h30 - 19h00</span> Tham quan Marina bay sand</div>
+      <div class="item" onclick="toggleItem(this)"><span>19h00 - 20h30</span> Di chuyển tới Lau Pa Sat, ăn uống Thunder tea rice, tonkatsu và miến xào</div>
+      <div class="item" onclick="toggleItem(this)"><span>21h30 - 22h15</span> Di chuyển về khách sạn nghỉ ngơi</div>
+    </div>
+  </div>
+
+  <div class="day" data-day="2">
+    <div class="day-header" onclick="toggleDay(this)">
+      <h2>🎢 Thứ 6 (24/04/2026)</h2>
+      <span class="day-toggle">▼</span>
+    </div>
+    <div class="day-items">
+      <div class="item" onclick="toggleItem(this)"><span>06h00</span> Dậy</div>
+      <div class="item" onclick="toggleItem(this)"><span>06h00 - 07h30</span> Chuẩn bị</div>
+      <div class="item" onclick="toggleItem(this)"><span>07h30 - 08h00</span> Di chuyển tới Kun Kaya Toast</div>
+      <div class="item" onclick="toggleItem(this)"><span>08h30 - 09h00</span> Di chuyển tới Sentosa</div>
+      <div class="item" onclick="toggleItem(this)"><span>09h00 - 09h10</span> Tới Sentosa</div>
+      <div class="item" onclick="toggleItem(this)"><span>09h10 - 09h30</span> Di chuyển tới Universal</div>
+      <div class="item" onclick="toggleItem(this)"><span>10h00 - 12h00</span> Check in + Tham quan + chơi Universal + Minions + lấy gift ở Silver Screen Store</div>
+      <div class="item" onclick="toggleItem(this)"><span>12h00 - 13h00</span> Di chuyển tới Super Hungry Food Stand và ăn</div>
+      <div class="item" onclick="toggleItem(this)"><span>13h05 - 13h10</span> Di chuyển tới Aquarium</div>
+      <div class="item" onclick="toggleItem(this)"><span>13h15 - 16h00</span> Tham quan Aquarium</div>
+      <div class="item" onclick="toggleItem(this)"><span>16h00 - 16h30</span> Di chuyển tới scentopia + lấy charm đeo tay</div>
+      <div class="item" onclick="toggleItem(this)"><span>16h45 - 18h10</span> Tham quan scentopia</div>
+      <div class="item" onclick="toggleItem(this)"><span>18h15 - 18h30</span> Đi dạo ở bãi biển</div>
+      <div class="item" onclick="toggleItem(this)"><span>18h30 - 19h00</span> Di chuyển tới Golden buffet (Good Old Days)</div>
+      <div class="item" onclick="toggleItem(this)"><span>19h00 - 20h10</span> Ăn tối ở golden buffet</div>
+      <div class="item" onclick="toggleItem(this)"><span>20h10 - 20h25</span> Ghé Wing of time</div>
+      <div class="item" onclick="toggleItem(this)"><span>20h40 - 21h15</span> Xem Wing of Time</div>
+      <div class="item" onclick="toggleItem(this)"><span>21h15 - 21h45</span> Di chuyển về Vivo city</div>
+      <div class="item" onclick="toggleItem(this)"><span>21h45 - 22h45</span> Về khách sạn nghỉ ngơi</div>
+      <div class="item" onclick="toggleItem(this)"><span>22h45 - 23h45</span> Sạc pin thiết bị điện thoại dự phòng</div>
+    </div>
+  </div>
+
+  <div class="day" data-day="3">
+    <div class="day-header" onclick="toggleDay(this)">
+      <h2>🌿 Thứ 7 (25/04/2026)</h2>
+      <span class="day-toggle">▼</span>
+    </div>
+    <div class="day-items">
+      <div class="item" onclick="toggleItem(this)"><span>06h00</span> Dậy</div>
+      <div class="item" onclick="toggleItem(this)"><span>06h00 - 07h30</span> Chuẩn bị</div>
+      <div class="item" onclick="toggleItem(this)"><span>07h30 - 08h00</span> Di chuyển Broadway</div>
+      <div class="item" onclick="toggleItem(this)"><span>08h00 - 08h30</span> Ăn sáng</div>
+      <div class="item" onclick="toggleItem(this)"><span>08h30 - 09h00</span> Di chuyển tới Garden By the bay</div>
+      <div class="item" onclick="toggleItem(this)"><span>09h00 - 12h30</span> Tham quan Garden By the bay</div>
+      <div class="item" onclick="toggleItem(this)"><span>12h30 - 14h00</span> Di chuyển tới China town</div>
+      <div class="item" onclick="toggleItem(this)"><span>14h00 - 15h00</span> Ăn trưa ở Maxwell Food Centre</div>
+      <div class="item" onclick="toggleItem(this)"><span>15h00 - 15h20</span> Chụp hình china town</div>
+      <div class="item" onclick="toggleItem(this)"><span>15h20 - 16h30</span> Uống trà sữa Amacha + mua quà</div>
+      <div class="item" onclick="toggleItem(this)"><span>16h30 - 18h30</span> Di chuyển về khách sạn nghỉ ngơi</div>
+      <div class="item" onclick="toggleItem(this)"><span>19h00 - 19h45</span> Ăn 3 meals a day</div>
+      <div class="item" onclick="toggleItem(this)"><span>20h00 - 20h30</span> Ăn Tonkotsu broth ramen</div>
+      <div class="item" onclick="toggleItem(this)"><span>20h30 - 22h00</span> Ăn Satay và uống nước ép, bia</div>
+      <div class="item" onclick="toggleItem(this)"><span>22h00 - 22h30</span> Về khách sạn nghỉ ngơi</div>
+      <div class="item" onclick="toggleItem(this)"><span>22h30 - 23h30</span> Soạn đồ sạc pin thiết bị điện thoại dự phòng</div>
+    </div>
+  </div>
+
+  <div class="day" data-day="4">
+    <div class="day-header" onclick="toggleDay(this)">
+      <h2>✈️ Chủ nhật (26/04/2026)</h2>
+      <span class="day-toggle">▼</span>
+    </div>
+    <div class="day-items">
+      <div class="item" onclick="toggleItem(this)"><span>05h30</span> Dậy</div>
+      <div class="item" onclick="toggleItem(this)"><span>05h30 - 06h30</span> Chuẩn bị</div>
+      <div class="item" onclick="toggleItem(this)"><span>06h30 - 07h30</span> Di chuyển tới nhà thờ CHURCH OF OUR LADY OF LOURDES</div>
+      <div class="item" onclick="toggleItem(this)"><span>07h30 - 08h45</span> Tham quan Hajilane và nhà thờ hồi giáo</div>
+      <div class="item" onclick="toggleItem(this)"><span>08h45 - 09h15</span> Ăn sáng ở AL-IMAM banana leaf restaurant</div>
+      <div class="item" onclick="toggleItem(this)"><span>09h15 - 10h30</span> Đi dạo Hajilane và chụp photobooth</div>
+      <div class="item" onclick="toggleItem(this)"><span>10h30 - 12h00</span> Về lại khách sạn trả phòng</div>
+      <div class="item" onclick="toggleItem(this)"><span>12h00 - 12h30</span> Di chuyển ra sân bay</div>
+      <div class="item" onclick="toggleItem(this)"><span>12h30 - 13h30</span> Tham quan sân bay và uống Kenangan coffee</div>
+      <div class="item" onclick="toggleItem(this)"><span>13h30 - 14h30</span> Di chuyển tới quầy checkin và ký gửi hành lý</div>
+      <div class="item" onclick="toggleItem(this)"><span>14h30 - 15h00</span> Ăn ở Kopitiam</div>
+      <div class="item" onclick="toggleItem(this)"><span>15h10 - 15h30</span> An ninh soi chiếu</div>
+      <div class="item" onclick="toggleItem(this)"><span>15h30 - 17h55</span> Tham quan và đợi tới giờ bay</div>
+      <div class="item" onclick="toggleItem(this)"><span>17h55 - 20h00 (19h00 Giờ Việt Nam)</span> Bay</div>
+      <div class="item" onclick="toggleItem(this)"><span>19h00 - 19h30</span> Nhập cảnh tự động + Lấy hành lý</div>
+      <div class="item" onclick="toggleItem(this)"><span>19h30 - 20h00</span> Về nhà</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- GALLERY -->
+<div id="gallery" class="content">
+</div>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <span class="close">&times;</span>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
