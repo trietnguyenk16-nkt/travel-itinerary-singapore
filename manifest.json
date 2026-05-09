@@ -3,8 +3,8 @@
   "short_name": "SGItinerary",
   "description": "Ứng dụng lập kế hoạch du lịch Singapore, giúp bạn khám phá những điểm đến hấp dẫn và lên lịch trình hoàn hảo cho chuyến đi của mình.",
 
-  "start_url": "/",
-  "scope": "/",
+  "start_url": "./",
+  "scope": "./",
 
   "display": "standalone",
   "orientation": "portrait",
