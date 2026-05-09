@@ -1,0 +1,29 @@
+{
+  "name": "Singapore Itinerary App",
+  "short_name": "SGItinerary",
+  "description": "Ứng dụng lập kế hoạch du lịch Singapore, giúp bạn khám phá những điểm đến hấp dẫn và lên lịch trình hoàn hảo cho chuyến đi của mình.",
+
+  "start_url": "/",
+  "scope": "/",
+
+  "display": "standalone",
+  "orientation": "portrait",
+
+  "background_color": "#ffffff",
+  "theme_color": "#2E75B6",
+
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
