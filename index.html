@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Singapore Trip 2026</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./style.css">
 
 
   <!-- PWA Manifest -->
-  <link rel="manifest" href="/manifest.json">
+  <link rel="manifest" href="./manifest.json">
 
   <!-- Theme color -->
   <meta name="theme-color" content="#2E75B6">
@@ -19,7 +19,7 @@
   <meta name="apple-mobile-web-app-title" content="SGItinerary">
 
   <!-- iOS icon -->
-  <link rel="apple-touch-icon" href="/icons/icon-192.png">
+  <link rel="apple-touch-icon" href="./icons/icon-192.png">
 
 </head>
 <body>
@@ -29,7 +29,7 @@
 
       window.addEventListener('load', () => {
 
-        navigator.serviceWorker.register('/sw.js')
+        navigator.serviceWorker.register('./sw.js')
 
           .then((registration) => {
             console.log('SW registered:', registration.scope);
@@ -43,7 +43,7 @@
 
     }
   </script>
-  
+
 <div class="header">
   <div class="header-content">
     <h1>🇸🇬 Singapore Trip 2026</h1>
