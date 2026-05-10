@@ -1,11 +1,11 @@
-const CACHE_NAME = 'my-pwa-v1';
+const CACHE_NAME = 'my-pwa-v2';
 
 const ASSETS = [
-  '/',
-  '/index.html',
-  '/manifest.json',
-  '/icons/icon-192.png',
-  '/icons/icon-512.png',
+  '/travel-itinerary-singapore/',
+  '/travel-itinerary-singapore/index.html',
+  '/travel-itinerary-singapore/manifest.json',
+  '/travel-itinerary-singapore/icons/icon-192.png',
+  '/travel-itinerary-singapore/icons/icon-512.png',
 ];
 
 
