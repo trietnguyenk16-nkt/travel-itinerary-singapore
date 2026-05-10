@@ -317,5 +317,50 @@
 </div>
 
 <script src="script.js"></script>
+
+<script>
+  // ===== LOCAL STORAGE CHECKLIST =====
+
+  // Gán ID tự động cho từng item
+  document.querySelectorAll('.item').forEach((item, index) => {
+
+    const itemId = 'trip-item-' + index;
+
+    // lưu id vào dataset
+    item.dataset.id = itemId;
+
+    // load trạng thái đã lưu
+    const saved = localStorage.getItem(itemId);
+
+    if (saved === 'true') {
+      item.classList.add('completed');
+    }
+
+  });
+
+  // Override toggleItem để auto save
+  const originalToggleItem = window.toggleItem;
+
+  window.toggleItem = function(item) {
+
+    // gọi function cũ
+    if (originalToggleItem) {
+      originalToggleItem(item);
+    } else {
+      item.classList.toggle('completed');
+    }
+
+    // lưu trạng thái
+    const isCompleted = item.classList.contains('completed');
+
+    localStorage.setItem(item.dataset.id, isCompleted);
+
+    // update stats nếu có
+    if (typeof updateStats === 'function') {
+      updateStats();
+    }
+  };
+
+</script>
 </body>
 </html>
