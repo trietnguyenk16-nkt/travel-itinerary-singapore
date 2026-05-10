@@ -20,7 +20,28 @@ function toggleDay(header) {
 
 // Toggle item completion
 function toggleItem(item) {
+
   item.classList.toggle("completed");
+
+  // ===== LOCAL STORAGE =====
+
+  // tạo id tự động nếu chưa có
+  if (!item.dataset.id) {
+
+    const allItems = document.querySelectorAll('.item');
+    const index = Array.from(allItems).indexOf(item);
+
+    item.dataset.id = 'trip-item-' + index;
+  }
+
+  // lưu trạng thái
+  localStorage.setItem(
+    item.dataset.id,
+    item.classList.contains('completed')
+  );
+
+  // =========================
+
   updateStats();
 }
 
@@ -90,6 +111,24 @@ document.addEventListener('keydown', (e) => {
 });
 
 // Initialize stats on load
+// ===== RESTORE LOCAL STORAGE =====
+
 document.addEventListener('DOMContentLoaded', () => {
-  updateStats();
+
+  const allItems = document.querySelectorAll('.item');
+
+  allItems.forEach((item, index) => {
+
+    const itemId = 'trip-item-' + index;
+
+    item.dataset.id = itemId;
+
+    const saved = localStorage.getItem(itemId);
+
+    if (saved === 'true') {
+      item.classList.add('completed');
+    }
+
+  });
+
 });
